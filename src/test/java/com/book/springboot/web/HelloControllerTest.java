@@ -12,7 +12,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class) //스프링부트 테스트와 Junit 사이에 연결자 역할
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(controllers = HelloController.class) // JPA까지 한번에 테스트 할 때는 @WebMvcTest 말고 @SpringBootTest 사용
 public class HelloControllerTest{
 
     @Autowired // 스프링이 관리하는 빈(Bean)을 주입받음
