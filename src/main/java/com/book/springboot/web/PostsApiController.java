@@ -1,6 +1,6 @@
 package com.book.springboot.web;
 
-import com.book.springboot.service.posts.PostsService;
+import com.book.springboot.service.PostsService;
 import com.book.springboot.web.dto.PostsResponseDto;
 import com.book.springboot.web.dto.PostsSaveRequestDto;
 import com.book.springboot.web.dto.PostsUpdateRequestDto;

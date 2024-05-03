@@ -2,9 +2,23 @@
 
 <h1>Hello~</h1>
 <div class="col-md-12">
+    <!--로그인 기능 영역-->
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            <!--머스테치는 다른 언어와 같은 if문을 제공하지 않음. true/false만 판단하기 때문에 항상 최종값을 넘겨줘야 한다.-->
+            {{#userName}}
+                Logged in as: <spain id="user">{{userName}}</spain>
+                <!--스프링 시큐리티에서 기본적으로 제공하는 로그아웃 url-->
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            {{^userName}}
+                <!--스프링 시큐리티에서 기본적으로 제공하는 로그인 url-->
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                <!-- 네이버 로그인 URL은 application-oauth.properties에 등록한 redirect-uri 값에 맞춰 자동으로 등록된다. -->
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+            {{/userName}}
+
         </div>
     </div>
     <br>

@@ -1,4 +1,4 @@
-package com.book.springboot.service.posts;
+package com.book.springboot.service;
 
 import com.book.springboot.domain.posts.Posts;
 import com.book.springboot.domain.posts.PostsRepository;
